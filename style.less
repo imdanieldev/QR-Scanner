@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: #E3F2FD;
+}
+.wrapper{
+     width: 420px;
+     border-radius: 7px;
+     background: #0B85FF;
+     padding: 30px 30px 35px;
+     height: 270px;
+     transition: height 0.2s ease;
+     &.active{
+          height: 525px;
+          form{
+               height: 225px;
+               pointer-events: none;
+               img{
+                    display: block;
+               }
+               .content{
+                    display: none;
+               }
+          }
+          .dateils{
+               opacity: 1;
+               pointer-events: auto;
+          }
+     }
+     form{
+          background: #FFF;
+          height: 210px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          border-radius: 7px;
+          cursor: pointer;
+          img{
+               display: none;
+               max-width: 148px;
+          }
+          .content{
+               i{
+                    color: #0B85FF;
+                    font-size: 55px;
+               }
+               p{
+                    color: #0B85FF;
+                    font-size: 16px;
+                    margin-top: 15px;
+               }
+          }
+     }
+     .dateils{
+          opacity: 0;
+          pointer-events: none;
+          margin-top: 25px;
+          transition: opacity 0.5s 0.05s ease;
+          textarea{
+               width: 100%;
+               resize: none;
+               height: 128px;
+               padding: 10px 15px;
+               background: transparent;
+               outline: none;
+               border: 1px solid #FFF;
+               color: #FFF;
+               font-size: 18px;
+               border-radius: 5px;
+          }
+          .buttons{
+               display: flex;
+               justify-content: space-between;
+               margin-top: 20px;
+               button{
+                    height: 55px;
+                    width: calc(100% / 2 - 10px);
+                    outline: none;
+                    border: none;
+                    color: #0B85FF;
+                    background: #FFF;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 500;
+               }
+          }
+     }
+}
+a{
+     color: blue;
+     text-decoration: none;
+     position: absolute;
+     bottom: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     cursor: pointer;
+}
